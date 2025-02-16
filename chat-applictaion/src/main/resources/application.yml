@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:9090}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://chat_db_e2qk_user:u8aeC0xYX6dQdlb8Wnzh1RovmGgQte0F@dpg-cup3dct6l47c73cijf3g-a/chat_db_e2qk
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  sql:
+    init:
+      mode: always  # Ensures schema initialization
+
+  web:
+    resources:
+      static-locations: classpath:/static/
